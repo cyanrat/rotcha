@@ -53,30 +53,17 @@
         <a href="https://www.fiverr.com/s/dDBArY0"><button>Fiverr Gigs</button></a>
         <a href="https://discordapp.com/users/395711162454376449"><button>Discord</button></a>
     </div>
-      <audio autoplay loop>
-        <source src="music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+     <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 
-    <script>
-        // Check if the audio was previously playing
-        window.addEventListener('load', function() {
-            var audio = document.querySelector('audio');
-            var isAudioPlaying = localStorage.getItem('isAudioPlaying');
-
-            // If audio was previously playing, start playing it again
-            if (isAudioPlaying === 'true') {
-                audio.play();
-            }
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let audio = document.getElementById('bg-music');
+        audio.play().catch(error => {
+            console.log("Autoplay prevented, user interaction required.");
         });
-
-        // Store the state of the audio when it is played or paused
-        document.querySelector('audio').addEventListener('play', function() {
-            localStorage.setItem('isAudioPlaying', 'true');
-        });
-
-        document.querySelector('audio').addEventListener('pause', function() {
-            localStorage.setItem('isAudioPlaying', 'false');
-        });
-    </script>
+    });
+</script>
 </html>
