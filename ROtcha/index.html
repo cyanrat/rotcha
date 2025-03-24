@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Landing Page</title>
+    <style>
+        @font-face {
+            font-family: 'PixelFont';
+            src: url('pixel-font.woff2') format('woff2'); /* Add your pixelated font */
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('bg.png') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+        }
+        .logo {
+            width: 500px; /* Increased size */
+            margin-bottom: 10px; /* Reduced space */
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px; /* Reduce space between items */
+        }
+        .menu button {
+            width: 300px; /* Button size */
+            padding: 15px;
+            font-size: 20px;
+            font-family: 'PixelFont', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid black;
+            background: white;
+            color: black;
+            cursor: pointer;
+            text-align: center;
+        }
+        .menu button:hover {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <img src="rotcha.png" alt="Game Logo" class="logo">
+    <div class="menu">
+        <a href="https://steamcommunity.com/profiles/76561199572474761/"><button>Steam Profile</button></a>
+        <a href="https://www.fiverr.com/s/dDBArY0"><button>Fiverr Gigs</button></a>
+        <a href="https://discordapp.com/users/395711162454376449"><button>Discord</button></a>
+    </div>
+    
+    </div>
+</body>
+</html>
