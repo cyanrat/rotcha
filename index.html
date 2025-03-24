@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotcha</title>
+    <title>Game Landing Page</title>
     <style>
         @font-face {
             font-family: 'PixelFont';
@@ -12,7 +12,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url('bg.png') no-repeat center center/cover;
+            background: linear-gradient(to bottom, #6a0dad, #b19cd9); /* Purple Gradient */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -20,7 +20,8 @@
             justify-content: center;
         }
         .logo {
-            width: 500px; /* Increased size */
+            width: 80%; /* Make logo responsive */
+            max-width: 400px; /* Limit max size */
             margin-bottom: 10px; /* Reduced space */
         }
         .menu {
@@ -30,9 +31,10 @@
             gap: 10px; /* Reduce space between items */
         }
         .menu button {
-            width: 300px; /* Button size */
+            width: 80%; /* Responsive width */
+            max-width: 300px; /* Limit max size */
             padding: 15px;
-            font-size: 20px;
+            font-size: 18px;
             font-family: 'PixelFont', sans-serif;
             font-weight: bold;
             text-transform: uppercase;
