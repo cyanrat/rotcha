@@ -53,9 +53,30 @@
         <a href="https://www.fiverr.com/s/dDBArY0"><button>Fiverr Gigs</button></a>
         <a href="https://discordapp.com/users/395711162454376449"><button>Discord</button></a>
     </div>
-     <audio autoplay loop>
-        <source src="Pond5 - Soniau - Happy Chiptune-yt.savetube.me.mp3" type="audio/mpeg">
+      <audio autoplay loop>
+        <source src="chiptune.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-</body>
+
+    <script>
+        // Check if the audio was previously playing
+        window.addEventListener('load', function() {
+            var audio = document.querySelector('audio');
+            var isAudioPlaying = localStorage.getItem('isAudioPlaying');
+
+            // If audio was previously playing, start playing it again
+            if (isAudioPlaying === 'true') {
+                audio.play();
+            }
+        });
+
+        // Store the state of the audio when it is played or paused
+        document.querySelector('audio').addEventListener('play', function() {
+            localStorage.setItem('isAudioPlaying', 'true');
+        });
+
+        document.querySelector('audio').addEventListener('pause', function() {
+            localStorage.setItem('isAudioPlaying', 'false');
+        });
+    </script>
 </html>
